@@ -37,10 +37,12 @@ $background: #eeeeee;
       width: $imageWidth;
     }
     figcaption {
+      max-width: 80%;
       color: gray;
       font-family: 'Montserrat', sans-serif;
       font-size: 1.2rem;
       letter-spacing: 0.04em;
+      word-break: break-all;
     }
   }
   p {
@@ -61,8 +63,9 @@ $background: #eeeeee;
       left: -6px;
       top: 0;
       border: 10px solid transparent;
-      border-top: 10px solid $background;
+      border-top: 16px solid $background;
       border-right: 10px solid $background;
+      pointer-events: none;
     }
   }
 }

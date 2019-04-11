@@ -1,5 +1,5 @@
 <template>
-  <textarea v-on:input="input" placeholder="テキストを入力"></textarea>
+  <textarea v-on:input="input" placeholder="テキストを入力" v-model="text"></textarea>
 </template>
 
 <script>
@@ -10,23 +10,26 @@ export default {
     return {
       text: '',
       height: '',
+      length: 0
     }
   },
   updated () {
     this.$emit('input', {
       text: this.$el.value,
       height: this.$el.scrollHeight,
+      length: this.$el.value.length
     })
   },
   mounted: function() {
     this.text   = this.value.text
     this.height = this.value.height
+    this.length = this.value.length
   },
   props: {
     value: {
       type: Object,
       required: true,
-    },
+    }
   },
   methods: {
     input: function () {

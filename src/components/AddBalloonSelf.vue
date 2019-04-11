@@ -41,8 +41,9 @@ $background: #20c4cb;
       right: -6px;
       top: 0;
       border: 10px solid transparent;
-      border-top: 10px solid $background;
+      border-top: 16px solid $background;
       border-left: 10px solid $background;
+      pointer-events: none;
     }
   }
 }
