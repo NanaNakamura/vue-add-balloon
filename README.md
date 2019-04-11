@@ -10,6 +10,13 @@ LINEとかのチャット風な吹き出しがセットになったコンポー�
 ## Usage
 
 ### HTML
+#### チャット風フレーム（吹き出しセット）
+```
+<template>
+  <ChatFrame />
+</template>
+```
+
 #### 自分の吹き出し
 ```
 <template>
@@ -36,17 +43,28 @@ LINEとかのチャット風な吹き出しがセットになったコンポー�
 .vueファイルコンポーネントフォルダーにコピペして、  
 componentsに追加？
 
+#### ChatFrameの場合
 ```
-import AddBalloonSelf from './components/AddBalloonSelf'
-import AddBalloonOthers from './components/AddBalloonOthers'
+import ChatFrame from './components/ChatFrame'
 
 export default {
   components: {
-    AddBalloonSelf,
-    AddBalloonOthers
+    ChatFrame
   }
 }
 ```
+
+#### ChatFrame.vue について
+
+template内に色々書いているけど、  
+実際あれば良い部分はdiv.frameなので、  
+他の部分は、プレビュー用においているソースなので削除してください
+
+[TextareaJustHeight.vue](https://github.com/NanaNakamura/vue-textarea-justheight) をついでに使っています。
+
+吹き出しの内容は `balloonTexts` に格納されます
+`"category": "self"` の場合は自分の吹き出し
+`"category": "other"` の場合は相手の吹き出し
 
 
 ## Build Setup
