@@ -62,8 +62,8 @@ template内に色々書いているけど、
 
 [TextareaJustHeight.vue](https://github.com/NanaNakamura/vue-textarea-justheight) をついでに使っています。
 
-吹き出しの内容は `balloonTexts` に格納されます
-`"category": "self"` の場合は自分の吹き出し
+吹き出しの内容は `balloonTexts` に格納されます  
+`"category": "self"` の場合は自分の吹き出し  
 `"category": "other"` の場合は相手の吹き出し
 
 
