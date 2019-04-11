@@ -1,6 +1,53 @@
 # vue-add-balloon
 
-> A Vue.js project
+LINEとかのチャット風な吹き出しがセットになったコンポーネント。  
+吹き出しがメインなコンポーネントです。  
+
+
+💬<a href="https://nananakamura.github.io/c/vue-add-balloon/index.html" target="_blank">Demo</a>
+
+
+## Usage
+
+### HTML
+#### 自分の吹き出し
+```
+<template>
+  <AddBalloonSelf
+    text="テキスト"
+  />
+</template>
+```
+
+#### 相手の吹き出し
+```
+<template>
+  <AddBalloonOthers
+    name="なまえ"
+    text="テキスト"
+    icon="アイコンの画像パス"
+  />
+</template>
+```
+
+
+### scripts
+
+.vueファイルコンポーネントフォルダーにコピペして、  
+componentsに追加？
+
+```
+import AddBalloonSelf from './components/AddBalloonSelf'
+import AddBalloonOthers from './components/AddBalloonOthers'
+
+export default {
+  components: {
+    AddBalloonSelf,
+    AddBalloonOthers
+  }
+}
+```
+
 
 ## Build Setup
 
@@ -26,9 +73,6 @@ npm install sass-loader node-sass --save-dev
 
 # reset CSSをインストール
 npm install --save formula-css
-
-# jquery をインストール
-npm install --save jquery
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
